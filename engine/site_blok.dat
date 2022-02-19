@@ -1,0 +1,51 @@
+<?
+$head = <<<EOT
+<script src="/highslide/highslide.min.js"></script>
+<link rel="stylesheet" href="/highslide/highslide.css">
+<script>
+	hs.graphicsDir = "/highslide/graphics/";
+	hs.wrapperClassName = "wide-border";
+</script>
+EOT;
+
+$bot_menu = <<<EOT
+<a href="http://{SITE}">Главная</a>
+<a href="http://{SITE}/feedback.html">Контакты</a>
+<a href="http://{SITE}/news.html">Новости</a>
+<a href="http://{SITE}/map.html">Карта сайта</a>
+EOT;
+
+$contact = <<<EOT
+<p>Адрес: Москва, ул. Центробежная, д.1</p>
+<p>Режим работы офиса:</p>
+<p>Будние дни: 10:00 — 19:00</p>
+<p>Суббота: 11:00 — 17:00</p>
+<p>Воскресенье — выходной</p>
+
+EOT;
+
+$reklama = <<<EOT
+<p>Надёжный и быстрый <a href="http://blondecms.ru/hosting-dlya-beloy-cms.html" target="_blank">хостинг и VPS</a></p>
+<p>Регистрация и продление <a href="http://blondecms/registraciya-domena.html" target="_blank">доменов</a><br> .RU и .РФ по одной цене 100 ₽</p>
+EOT;
+
+$copy = <<<EOT
+© «Название компании» 20хх-2018
+EOT;
+
+$stat = <<<EOT
+<script><!--
+document.write("<a href='//www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t18.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border='0' width='88' height='31'></a>")
+//--></script><!--/LiveInternet-->
+
+EOT;
+
+?>

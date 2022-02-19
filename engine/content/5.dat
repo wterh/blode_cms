@@ -1,0 +1,42 @@
+<?
+$page_title = <<<EOT
+Хлеб причина болезней
+EOT;
+
+$page_h1 = <<<EOT
+Хлеб причина болезней
+EOT;
+
+$dd = <<<EOT
+08.04.2013
+EOT;
+
+$ddleto = <<<EOT
+36.5.7521
+EOT;
+
+$content = <<<EOT
+<p>Болеешь Раком, Одышкой? Хочешь выздоровить?</p>
+
+<p>&nbsp;</p>
+
+<p>Просто выброси хлеб и скоро болезни пройдут.</p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/aA-0UmTqd7I?rel=0" width="640"></iframe></p>
+
+<p>Опасный хлеб или какой хлеб мы едим</p>
+
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/euwKpNTdpAU?rel=0" width="640"></iframe></p>
+
+<p>Хлеб который мы едим - Ядовит!</p>
+
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/NVuyuk7yJns?rel=0" width="640"></iframe></p>
+
+EOT;
+
+$subcontent = <<<EOT
+
+EOT;
+?>

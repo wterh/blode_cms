@@ -1,0 +1,211 @@
+<?php
+// Название программы: Белая CMS
+// Версия: v.1.7 Free 
+// URL: http://BlondeCMS.ru
+
+error_reporting(E_ALL);
+$robot='';$id='';$page_descr='';$page_keyws='';$top_menu='';$path='';$data_blok='';
+$menulink = '<a href="http://{SITE}/{LINK}">{TITLE_LINK}</a>'; 
+$menulink_a = '<a href="http://{SITE}/{LINK}" class="active">{TITLE_LINK}</a>'; 
+
+$t_menu = '<a href="http://{SITE}/{LINK}">{TITLE_LINK}</a>'; 
+$t_menu_a = '<a href="http://{SITE}/{LINK}" class="active">{TITLE_LINK}</a>'; 
+
+if(isset($_GET['alias']))
+{
+	$alias = trim($_GET['alias']);
+	switch($alias)
+	{
+		case 'feedback':require("modules/feedback.php");
+		break;
+		case 'news':require("modules/news.php");
+		break;
+		case 'map':require("modules/map.php");
+		break;
+		default:
+		{
+			$fm = file('engine/menu.csv'); 
+			foreach($fm as $line) 
+			{ 
+				$elem = explode("<!>",$line); 
+				if(trim($elem[1]) == trim($alias))
+				{
+					if(file_exists("engine/content/" . $elem[0] . ".dat")) 
+					{  
+						require("engine/content/" . $elem[0] . ".dat"); 
+					    $zz='1'; 
+					}
+					else  
+					{  
+						require('engine/404.html'); 
+						exit;  
+					} 
+				} 
+			}
+			if(@$zz <> '1'){
+			header("HTTP/1.1 404 Moved Permanently");
+			$robot='<meta name="ROBOTS" content="NOINDEX,NOFOLLOW">';
+			$page_title='404';
+			$page_h1='404';
+			$data_blok='0';
+			$content='<img src="/img/error.gif" alt="error" style="float:left; margin:0 20px"> <b>Нет такой страницы</b>';
+			$subcontent = 'Зайдите на <a href="/">главную</a> страницу и поищите там';
+			}
+		}
+		break;
+	}
+}
+else
+{ 
+	require('engine/content/start.dat');
+} 
+require ('engine/site_blok.dat');
+
+if (file_exists ('templates/' . $mytmpl . '/skin.html')) { $out = file_get_contents('templates/' . $mytmpl . '/skin.html');
+} else { require ('engine/error.html'); die ('');
+}
+
+$menu_output = '';
+$file_menu = file ("engine/menu.csv");
+$id = 0;
+if ( isset($_GET["id"]) && !empty($_GET["id"]))
+{
+	$id = $_GET["id"];
+}
+else
+{
+	$alias = @$_GET ['alias'];
+	foreach( $file_menu as $line )
+	{
+		$el = explode("<!>",$line);
+		if ( trim($el[1]) == trim($alias) )
+		{
+			$id = $el[0];
+		}
+	}
+}
+
+$k = 0;
+$parent = 0;
+foreach( $file_menu as $line )
+{
+	$elem[$k] = explode ("<!>", $line);
+    if ( trim($elem[$k][1]) == trim($alias) )
+	{
+		if ( trim($elem[$k][3]) == 0 ) $parent = trim($elem[$k][0]);
+		else $parent = trim($elem[$k][3]);
+	}
+	$k++;
+}
+    if ( $alias =='' ){
+      $output = $menulink_a;
+    }else{
+      $output = $menulink;
+    }
+			$output = str_replace ("{LINK}", '', $output);
+			$output = str_replace ("{TITLE_LINK}", 'Главная', $output);
+			$menu_output .= '<li class="menu1">'.$output.'</li>';
+
+for( $i = 0; $i < $k; ++$i)
+{
+	if ( trim($elem[$i][3]) == 0)
+	{
+    if ( $parent != 0 && $parent == trim($elem[$i][0])){
+      $output = $menulink_a;
+    }else{
+      $output = $menulink;
+    }
+		$output = str_replace ("{LINK}", $elem[$i][1] . ".html", $output);
+		$output = str_replace ("{TITLE_LINK}", $elem[$i][2], $output);
+		$menu_output .= '<li class="menu1">'.$output.'</li>';
+   	
+		if ( $parent != 0 && $parent == trim($elem[$i][0]) )
+		{
+			for( $j = 0; $j < $k; ++$j)
+			{
+				if ( trim($elem[$j][3]) == $parent)
+				{
+				if ($id==$elem[$j][0]){
+					$output = $menulink_a;
+				}else{
+					$output = $menulink;
+					}
+					$output = str_replace ("{LINK}", $elem[$j][1] . ".html", $output);
+					$output = str_replace ("{TITLE_LINK}", $elem[$j][2], $output);
+					$menu_output .= '<li class="menu2">'.$output.'</li>';
+				}
+			}
+		}
+	}
+}
+if($alias =='feedback' ){$output = $menulink_a;}else{$output = $menulink;}
+$output = str_replace ("{LINK}", 'feedback.html', $output); $output = str_replace ("{TITLE_LINK}", 'Написать письмо', $output);
+$menu_output .= '<li class="menu1">'.$output.'</li>';
+
+$doch = false;
+$n_path = '<a href="/">Главная:</a>';
+$t = "";
+
+function get_full_path($id,$array,$path)
+{
+	global $t;
+
+	if ( $id != 0 )
+	{
+		foreach ($array as $e)
+		{
+			$elem = explode ("<!>", $e);
+			if ( $id == trim($elem[0]) )
+			{
+				$path = " &raquo; <a href=\"http://{SITE}/".trim($elem[1]).".html\">".$elem[2]."</a>" . $path ;
+				get_full_path(trim($elem[3]),$array,$path);
+			}
+		}
+	}
+	else $t=$path;
+}
+get_full_path($id,$file_menu,$path);
+$path = $n_path.$t;
+
+
+if($alias =='' ){$output = $t_menu_a;}else{$output = $t_menu;}
+$output = str_replace ("{LINK}", '', $output); $output = str_replace ("{TITLE_LINK}", 'Главная', $output);
+$top_menu .= '<li>'.$output.'</li>';
+
+if($alias =='news' ){$output = $t_menu_a;}else{$output = $t_menu;}
+$output = str_replace ("{LINK}", 'news.html', $output); $output = str_replace ("{TITLE_LINK}", 'Новости', $output);
+$top_menu .= '<li>'.$output.'</li>';
+
+if($alias =='feedback' ){$output = $t_menu_a;}else{$output = $t_menu;}
+$output = str_replace ("{LINK}", 'feedback.html', $output); $output = str_replace ("{TITLE_LINK}", 'Контакты', $output);
+$top_menu .= '<li>'.$output.'</li>';
+
+if($alias == ''){$num_data ='';}
+	else{
+	if($data_blok == '0'){$num_data ='';}
+	else{
+		if($num_data == '2')$num_data = '<br>Дата публикации: '.$dd; 
+		else $num_data = '<br>Дата публикации: '.$ddleto;}
+}
+
+$out = str_replace ("{TITLE}",      $page_title,  $out);
+$out = str_replace ("{HEAD}",       $head,        $out);
+$out = str_replace ("{H1}",         $page_h1,     $out);
+$out = str_replace ("{DESC}",	    $page_descr,  $out); 
+$out = str_replace ("{KEYWORDS}",	$page_keyws,  $out); 
+$out = str_replace ("{TOPMENU}",    $top_menu,    $out);
+$out = str_replace ("{MENU}",       $menu_output, $out);
+$out = str_replace ("{BOTMENU}",    $bot_menu,    $out);
+$out = str_replace ("{PATH}",       $path,        $out);
+$out = str_replace ("{CONTENT}",    $content,     $out);
+$out = str_replace ("{SUBCONTENT}", $subcontent,  $out);
+$out = str_replace ("{REKLAMA}",    $reklama,     $out);
+$out = str_replace ("{CONTACT}",    $contact,     $out);
+$out = str_replace ("{COPY}",       $copy,        $out);
+$out = str_replace ("{STAT}",       $stat,        $out);
+$out = str_replace ("{SITE}",       $site,        $out);
+$out = str_replace ("{SKIN}",       $mytmpl,      $out);
+$out = str_replace ("{ROBOT}",      $robot,       $out);
+$out = str_replace ("{LETO}",       $num_data,    $out);
+echo $out;
+?>

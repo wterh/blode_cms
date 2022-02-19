@@ -1,0 +1,26 @@
+<?
+$page_title = <<<EOT
+Выступление Левашова в Думе РФ
+EOT;
+
+$page_h1 = <<<EOT
+Выступление Левашова в Думе РФ 10.06.2010
+EOT;
+
+$dd = <<<EOT
+18.03.2013
+EOT;
+
+$ddleto = <<<EOT
+15.5.7521
+EOT;
+
+$content = <<<EOT
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/mfAnDUqeEhQ?rel=0" width="640"></iframe></p>
+
+EOT;
+
+$subcontent = <<<EOT
+
+EOT;
+?>

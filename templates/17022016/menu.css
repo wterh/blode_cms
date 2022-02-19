@@ -1,0 +1,26 @@
+/* Главное Меню */
+#menu{width: 260px; margin:30px 0 30px 10px; text-transform:uppercase}
+#menu ul li{list-style: none; overflow:hidden}
+
+/*---Родительское меню---*/
+.menu1 a{display: block; padding: 5px 0 0px 5px; width:250px; height:25px; font:normal 13px verdana; color:#555555; border-bottom:1px solid #fafafa}
+.menu1 a:hover{font:normal 13px verdana; color:#000000; border-bottom:1px solid #3791C5}
+.menu1 a.active{color:#FCD116; background: url(head_bg_blue_triangle.jpg) no-repeat center -80px; border-bottom:none}
+
+/* Главное Меню Второго уровня */
+.menu2{display: block; overflow:hidden; width:250px; height:auto}
+.menu2 a{display: block; padding:2px 0 5px 15px; width:250px; height:auto; font:bold 11px verdana; color:#929292}
+.menu2 a:hover{font:bold 11px verdana; color:#333333}
+.menu2 a.active{padding:2px 0 5px 15px; font:bold 11px verdana; color:#d00000}
+
+/*Верхнее меню */
+#topmenu{width: 500px; height:50px; float:right; margin:25px 0 0}
+#topmenu li{float:left; display: block; margin:0 0 0 10px; text-align: center}
+#topmenu a{display: block; width: 156px; height:25px; color:#fff; padding-top:8px; background: url(head_bg_blue_triangle.jpg) no-repeat right 0}
+#topmenu a:hover{display: block; width: 156px; height:25px; color:#FCD116; padding-top:8px}
+#topmenu a.active{display: block; width: 156px; height:25px; color:#FCD116; padding-top:8px; background: url(head_bg_blue_triangle.jpg) no-repeat -50px -50px}
+
+/*Нижнее меню */
+#botmenu{width:700px; height:50px}
+#botmenu a{display: block; width:110px; height:25px; margin:15px 10px 0 0; padding:7px 0 0; float:left; background: url(head_bg_blue_triangle.jpg) no-repeat center center; padding-right:5px; color:#ffffff; text-align: center}
+#botmenu a:hover{color:#FCD116;}

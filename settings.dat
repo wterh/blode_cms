@@ -1,0 +1,12 @@
+<?
+$mysite='';
+$mytmpl='17022016';
+$ip_ok='2';
+$myip='';
+$ie_bloc='1';
+$num_data='1';
+$aut_name = <<<EOT
+Дмитрий
+EOT;
+$admin_email = 'blondecms@mail.ru'; 
+?>

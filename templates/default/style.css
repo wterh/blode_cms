@@ -1,0 +1,83 @@
+*{margin:0; padding:0}
+*:focus {outline: none}
+body{background:#fff url(bg.gif)}
+img{border: 0}
+h1{color:#555; font:normal 20px verdana; float:right; margin:0 0 5px}
+h2{color:#333; font:normal 14px verdana;}
+p, li, td, div{color:#333; font:normal 12px verdana;}
+::selection {background:#e2e2e2; color: #000;}
+::-moz-selection { background:#e2e2e2; color: #000;}
+a:link {color:#00a6ff; text-decoration: none}
+a:visited {color:#00a6ff; text-decoration:none}
+a:hover {color:#c52026; text-decoration:none}
+
+/*Страница*/
+#page{width:1000px; height:auto; height:auto; overflow:hidden; padding:5px; margin:10px auto 20px; border:3px double #e3e3e3;
+box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555; background:#fff}
+
+/*Шапка*/
+#header{width:1000px; height:80px; overflow:hidden; border-bottom:3px double #e3e3e3}
+#h_left{width:300px; height:auto; float:left}
+#h_right{width:690px; height:auto; float:right}
+
+/*Лого*/
+#h_left a{width:287px; height:60px; float:left; margin:10px 0 0; background:url(logo.jpg) no-repeat}
+
+/*Центр*/
+#center{width:1000px; height:auto; overflow:hidden}
+#c_left{width:270px; height:auto; float:left}
+#c_right{width:700px; min-height:400px; float:right; margin:0 0 20px; padding:10px}
+
+/*Контент*/
+#path a{color:#555; font-size: 11px}
+#content{width:670px; min-height:200px; overflow:hidden; margin:10px; padding:10px 5px; box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555; border:1px solid #f2f2f2}
+.news{overflow:hidden; width:650px; height: auto; font-size:13; padding:5px; margin:10px auto; border:1px solid #e3e3e3; background:#fafafa}
+.news a{font-size:14px}
+.dat{z-index: 2; position: relative; float:right; width:80px; height: 14px; top:10px; right:-2px; font-size:10px; 
+	background:#fff; border:1px solid #e2e2e2; border-radius: 5px; color:#555; text-align:center}
+
+/*Дополнительный Контент*/
+#subcontent{width:670px; min-height:50px; overflow:hidden; margin:10px; padding:10px 5px; box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555; border:1px solid #f2f2f2}
+
+/*Блоки, Контакты, Реклама, Последние статьи*/
+.c_bloc{width:260px; height:auto; overflow:hidden; margin:10px 0 30px; padding:5px 5px 10px; box-shadow:2px 2px 2px #e2e2e2}
+.c_b_zag{width:240px; height:25px; padding:0 0 0 20px; font-size: 16px; font-weight: normal; background: url(fon.png) repeat-x 0 7px; border-bottom:3px double #e3e3e3}
+.c_b_content{width:260px; height:auto; margin:10px 0}
+
+/*Обратная связь*/
+#forma form{width: 94%; height:400px; margin:0 0 30px; padding:30px 3%; border:#e2e2e2 solid 1px; background: url(bg.gif)}
+#forma input{width: 98%; height: 20px; margin:0 0 10px; padding:5px; border:0px; border:1px solid #e3e3e3}
+#forma textarea{width: 98%; height: 150px; margin:0 0 10px; padding:5px; background:#fff; border:0px; border:1px solid #e3e3e3}
+#forma input.button{width: 220px; height:35px; font-size: 12px; font-weight: normal; font-family: verdana; border:#e2e2e2 solid 1px; 
+	margin:0 0 0 5px; padding:7px 20px 7px 45px; cursor:pointer; border-radius: 3px; background:url(ok.png) no-repeat 10px 2px, url(fon.png)}
+#forma input.button:hover{border:#67B715 solid 1px; background:url(okhover.png) no-repeat 10px 2px, url(fon.png) left -7px}
+
+#forma input:focus{border:#67B715 solid 1px; box-shadow: 0 0 3px #67B715}
+#forma textarea:focus{border:#67B715 solid 1px; box-shadow: 0 0 3px #67B715}
+
+/*Подвал*/
+#bottom{width:1000px; height:90px; overflow:hidden; border-top:3px double #e3e3e3}
+#b_left{width:700px; height:auto; float:left}
+#b_right{width:290px; height:auto; float:right}
+
+#copir{width:700px; height:20px; border-top:3px double #e3e3e3; margin:10px 0 0; padding:5px; text-align:center}
+#copir a{color:#555}
+
+#stat{width:90px; height:32px; float:right; margin: 15px 10px 0 0}
+
+@media(min-width:1100px){
+#page, #header, #bottom{width:1060px}
+#h_left{width:300px}
+#h_right, #c_right{width:750px}
+#center{width:1060px}
+#content, #subcontent{width:720px}
+}
+
+@media(min-width:1200px){
+#page, #header, #bottom{width:1160px}
+#h_left{width:300px}
+#h_right, #c_right{width:850px}
+#center{width:1160px}
+#content, #subcontent{width:820px}
+}
+

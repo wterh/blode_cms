@@ -1,0 +1,29 @@
+<?
+$page_title = <<<EOT
+Русский язык был по всему миру
+EOT;
+
+$page_h1 = <<<EOT
+Весь мир говорил на Русском языке
+EOT;
+
+$dd = <<<EOT
+14.04.2013
+EOT;
+
+$ddleto = <<<EOT
+1.6.7521
+EOT;
+
+$content = <<<EOT
+<p>Весь мир говорил на Русском языке, который был единственным языком. Учёные доказали, что мозг человека думает на Русском языке</p>
+
+<p style="text-align: center; margin:10px 0"><object data="http://www.youtube.com/v/30g7QPjnT4A?version=3&amp;hl=ru_RU" height="380" type="application/x-shockwave-flash" width="640"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/30g7QPjnT4A?version=3&amp;hl=ru_RU" /><param name="allowfullscreen" value="true" /></object></p>
+
+EOT;
+
+$subcontent = <<<EOT
+<p>Александр Драгункин - про Русский язык</p>
+
+EOT;
+?>

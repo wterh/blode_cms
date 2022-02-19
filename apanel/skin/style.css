@@ -1,0 +1,87 @@
+*{margin: 0; padding: 0px}
+body {border: 0; background:#fff url(bg.gif)}
+li,ol,ul,td,div { font:normal 12px verdana}
+h1 {margin:0 0 10px 10px; font: 18px verdana; color: #555}
+h2 {margin:0 0 10px 10px; font:normal 16px verdana; color: #555;}
+img { border: 0}
+*:focus {outline: none}
+a:link {color:#00a6ff; text-decoration: none}
+a:visited {color:#00a6ff; text-decoration:none}
+a:hover {color:#c52026; text-decoration:none}
+.active{color:#00a6ff;}
+select{cursor:pointer}
+option:hover{cursor:pointer}
+#vhod{width:300px; height: 190px; margin:17% auto 0; border:5px double #e0e0e0; background:#fff url(bg.gif) no-repeat;
+	background-size:200% 200%; box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555
+}
+#zag{background:url(../images/okk.png); width:100%; height:32px; margin:0 0 15px}
+#zag p{padding:5px 0 0 24px; font:normal 16px arial}
+._vhod{width:240px; height:20px; margin:5px auto; padding: 5px; border:1px solid #e3e3e3; font:normal 16px verdana; text-indent:24px; border-radius:3px}
+.lo{background:#fff url(../images/user.png) no-repeat 5px 7px}
+.pa{background:#fff url(../images/key.png) no-repeat 5px 6px}
+#vhod_ok{width:120px; height:32px; margin:5px 0 0 155px; background:url(../images/okk.png); border:1px solid #e3e3e3; font:normal 14px arial; cursor:pointer}
+#vhod_ok:hover{background:#e0e0e0; color:#00a6ff}
+
+#slav-date{width:85px; font-size: 18px; font-weight: normal; color:#f00; border:none
+}
+#main{width:1000px; height:auto; padding:5px; margin:10px auto 20px; border:3px double #e3e3e3;
+box-shadow: -18px 5px 20px -20px #555, 18px 5px 20px -20px #555; background:#fff
+}
+#main_top{width:auto; height:50px
+}
+#menu_img{width:100%; height:auto; margin:0 0 10px; padding:5px 0; border:3px double #e3e3e3
+}
+#menu a{color:#999; font:normal 11px verdana; text-transform:uppercase
+}
+#i{width:900px; height: auto; font-size:12px; padding:5px; margin:10px auto; border:1px dotted #e3e3e3; background:#ffffff}
+
+#ast{width:100%}
+#ast input{width:250px; border:2px solid #e3e3e3; padding-left:5px}
+#ast select{width:260px; border:2px solid #e3e3e3; padding-left:2px}
+#tdd{width:730px}
+#fontr{background:#fafafa;}
+#fontr:hover{background:#ededed}
+#inews{width:700px; margin: 5px 0 10px; border:2px solid #e3e3e3}
+
+#polya select{min-width:200px; margin:3px 0; padding: 1px 3px 3px; border:2px solid #e3e3e3; padding-left:2px}
+#polya input{display: inline-block; width:500px; margin:2px 0; padding: 1px 3px 3px; border:2px solid #e3e3e3}
+
+.bloki{width:940px; min-height:150px; padding: 3px; border:2px solid #c0c0c0}
+.shirina{width:940px; margin:0 auto}
+
+/*Кнопка*/
+
+.okk{font:normal 12px verdana;
+border:#e2e2e2 solid 1px; margin: 0 5px; padding:10px 25px 10px 50px; cursor:pointer;
+-moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+background:url(../images/ok.png) no-repeat 10px 2px, url(../images/okk.png); 
+}
+.okk:hover {color:#2A770B; border:#999 solid 1px; background:url(../images/oka.png) no-repeat 10px 2px, url(../images/okk.png) left -5px}
+
+
+.ok{font:normal 12px verdana; border:#e2e2e2 solid 1px; text-decoration:none; margin: 0 5px; padding:5px 15px; cursor:pointer;
+background:url(../images/okk.png); border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px}
+.ok:hover {color:#f00}
+a.ok{color:#000}
+
+#bottom{width:1000px; height: auto; margin:30px 0 0; padding:5px 0; border-top:3px double #e3e3e3}
+
+/*Вкладки*/
+#container {width: 940px; margin: 0 auto; padding: 25px 10px 0}
+#content1, #content2, #content3, #content4 {min-height:200px}
+.tabs {min-width: 320px; max-width: 100%; padding: 0px; margin: 0 auto}
+section {display: none; padding: 15px; background: #fff; border: 1px solid #ddd}
+.tabs input {display: none}
+.tabs label {display: inline-block; margin: 0 0 -1px; padding: 10px 25px; text-align: center; color: #aaa; border: 1px solid #ddd; background: #f1f1f1}
+.tabs label:hover {color: #888; cursor: pointer}
+.tabs input:checked + label {color: #555; border: 1px solid #ddd; border-top: 4px solid #00a6ff; border-bottom: 1px solid #fff; background: #fff}
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 {display: block}
+
+@media(min-width:1260px){
+#main, #bottom{width:1160px}
+#container, .bloki, .shirina{width:1000px}
+}
+@media(min-width:1420px){
+#main, #bottom{width:1260px}
+#container, .bloki, .shirina{width:1100px}
+}

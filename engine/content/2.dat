@@ -1,0 +1,26 @@
+<?
+$page_title = <<<EOT
+Дмитрий Медведев рассказал про НЛО
+EOT;
+
+$page_h1 = <<<EOT
+Медведев рассказал про НЛО
+EOT;
+
+$dd = <<<EOT
+17.03.2013
+EOT;
+
+$ddleto = <<<EOT
+14.5.7521
+EOT;
+
+$content = <<<EOT
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/g9Chj3ebv54?rel=0" width="640"></iframe></p>
+
+EOT;
+
+$subcontent = <<<EOT
+
+EOT;
+?>

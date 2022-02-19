@@ -1,0 +1,32 @@
+<?
+$page_title = <<<EOT
+Славяно-арийский календарь
+EOT;
+
+$page_h1 = <<<EOT
+Славяно-арийский календарь + 5508 лет
+EOT;
+
+$dd = <<<EOT
+17.03.2013
+EOT;
+
+$ddleto = <<<EOT
+14.5.7521
+EOT;
+
+$content = <<<EOT
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><iframe src='http://videoapi.my.mail.ru/videos/embed/mail/amirtimur079/_myvideo/223.html' width='640' height='367' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+
+<p>&nbsp;</p>
+
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/9_OG-ED8xbE?rel=0" width="640"></iframe></p>
+
+EOT;
+
+$subcontent = <<<EOT
+
+EOT;
+?>

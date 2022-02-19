@@ -1,0 +1,34 @@
+<?
+$page_title = <<<EOT
+Как завоевать весь мир
+EOT;
+
+$page_h1 = <<<EOT
+Как завоевать весь мир
+EOT;
+
+$page_descr = <<<EOT
+Описание
+EOT;
+
+$page_keyws = <<<EOT
+Ключи
+EOT;
+
+$dd = <<<EOT
+17.03.2013
+EOT;
+
+$ddleto = <<<EOT
+14.5.7521
+EOT;
+
+$content = <<<EOT
+<p style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube-nocookie.com/embed/vyC3S2heha8?rel=0" width="640"></iframe></p>
+
+EOT;
+
+$subcontent = <<<EOT
+
+EOT;
+?>

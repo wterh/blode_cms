@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic);
+*{margin:0; padding:0}
+*:focus {outline: none}
+body{background: url(head_bg_blue_triangle.jpg) repeat-x center 80px, url(bg.jpg)}
+img{border: 0}
+h1{color:#555; font:normal 34px 'Poiret One', cursive; letter-spacing:1px; float:right; margin:0 0 5px}
+h2{color:#333; font:normal 14px verdana;}
+p, li, td, div{color:#333; font:normal 12px verdana;}
+p{margin-bottom:7px}
+::selection {background:#999999; color: #fff;}
+::-moz-selection { background:#999999; color: #fff;}
+a:link, a:visited {color:#3791C5; text-decoration: none}
+a:hover {color:#E08900; text-decoration:none}
+blockquote{width:92%; height:auto; margin:10px auto; padding:10px; background:#fafafa; border-left:5px solid #3791C5}
+
+/*Страница*/
+#page{width:1000px; height:auto; overflow:hidden; margin:0 auto}
+
+/*Шапка*/
+#header{width:1000px; height:200px; overflow:hidden}
+#header_top{width:1000px; height:80px; overflow:hidden}
+#h_left{width:300px; height:auto; float:left}
+#h_right{width:690px; height:auto; float:right}
+#header_slog{width:1000px; height:120px; }
+
+/*Лого*/
+#h_left a{width:270px; height:41px; float:left; margin:20px 0 0; background:url(logo.png) no-repeat}
+#head_text{margin:25px 0 0; font:normal 36px 'Poiret One', cursive; letter-spacing:1px; color:#fff}
+#head_text2{margin:0 0 0 25px; font:normal 11px verdana; letter-spacing:3px; color:#fff}
+
+/*Центр*/
+#center{width:1000px; height:auto; overflow:hidden}
+#c_left{width:270px; height:auto; float:left}
+#c_right{width:700px; min-height:400px; float:right; margin:0 0 20px; padding:10px}
+
+/*Содержание*/
+#path a{color:#555; font-size: 11px}
+#content{width:690px; min-height:200px; overflow:hidden; margin:10px 0 40px; padding:10px 5px; background:#f2f2f2;
+  box-shadow: 0px 10px 20px -15px #555555, 0px -5px 15px -15px #555555}
+#content ul, #content ol{margin:10px 25px; padding:10px; overflow:hidden; background:#fafafa}
+#content li{margin-left:15px; list-style:square}
+.news{overflow:hidden; width:650px; height: auto; font-size:13; padding:5px; margin:10px auto; border:1px solid #e3e3e3; background:#fafafa}
+.news a{font-size:14px}
+.dat{z-index: 2; position: relative; float:right; width:80px; height: 14px; top:10px; right:-2px; font-size:10px; 
+	background:#fff; border:1px solid #e2e2e2; border-radius: 5px; color:#555; text-align:center}
+
+/*Дополнительное Содержание*/
+#subcontent{width:690px; min-height:70px; overflow:hidden; margin:10px 0; padding:10px 5px; background:#f2f2f2;
+ box-shadow: 0px 10px 20px -15px #555555, 0px -5px 15px -15px #555555}
+
+/*Блоки, Контакты, Реклама, Последние статьи*/
+.top10{margin:10px 0 0}
+.c_bloc{width:260px; height:auto; overflow:hidden; padding:5px 5px 10px}
+.c_b_zag{width:240px; height:35px; padding:0 0 0 20px; font:normal 30px 'Poiret One', cursive; letter-spacing:1px; border-bottom:1px solid #3791C5; color:#005F93}
+.c_b_zag:first-letter{font:bold 26px 'Poiret One'}
+.c_b_text{width:260px; height:auto; margin:10px 0}
+
+/*Обратная связь*/
+#forma form{width: 94%; height:400px; margin:0 0 30px; padding:30px 3%; border:#e2e2e2 solid 1px}
+#forma input{width: 98%; height: 20px; margin:0 0 10px; padding:5px; border:0px; border:1px solid #e3e3e3}
+#forma textarea{width: 98%; height: 150px; margin:0 0 10px; padding:5px; background:#fff; border:0px; border:1px solid #e3e3e3}
+#forma input.button{width: 220px; height:35px; font-size: 12px; font-weight: normal; font-family: verdana; border:#e2e2e2 solid 1px; 
+	margin:0 0 0 5px; padding:7px 20px 7px 45px; cursor:pointer; border-radius: 3px; background:url(ok.png) no-repeat 10px 2px, url(fon.png)}
+#forma input.button:hover{border:#3791C5 solid 1px; background:url(ok.png) no-repeat 10px 2px, url(fon.png) left -7px}
+
+#forma input:focus{border:#3791C5 solid 1px; box-shadow: 0 0 3px #3791C5}
+#forma textarea:focus{border:#3791C5 solid 1px; box-shadow: 0 0 3px #3791C5}
+
+
+/* Подвал*/
+#footer{width:100%; height:100px; margin:30px 0 30px; background:#D8D8D8}
+#footer_center{width:1000px; height:auto; margin:0 auto; overflow:hidden}
+#f_left{width:700px; height:auto; float:left}
+#f_right{width:290px; height:auto; float:right}
+#copir{width:700px; height:20px; margin:10px 0 0; padding:5px}
+#copir a{color:#555}
+#stat{width:90px; height:32px; float:right; margin: 15px 0 0}
+
+@media(min-width:1100px){
+#page, #header, #header_top, #header_slog, #footer_center {width:1060px}
+#h_left{width:300px}
+#h_right, #c_right{width:750px}
+#center{width:1060px}
+#content, #subcontent{width:740px}
+.news{width:710px
+}
+
+@media(min-width:1200px){
+#page, #header, #header_top, #header_slog, #footer_center {width:1160px}
+#h_left{width:300px}
+#h_right, #c_right{width:850px}
+#center{width:1160px}
+#content, #subcontent{width:840px}
+.news{width:810px
+}
